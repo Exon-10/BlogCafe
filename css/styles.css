@@ -1,0 +1,115 @@
+html{
+    font-size: 62.5%;
+}
+*{
+    border: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+a{
+    -webkit-tap-highlight-color:rgba(255, 255, 255, 0);
+}
+:root{
+    --fuente:'fuente';
+    --color_banco:rgb(243, 243, 243);
+}
+@font-face {
+    font-family:"fuente";
+    src: url("../font/ReggaeOne_Regular.ttf");
+}
+@font-face {
+    font-family:"fuente2";
+    src: url("../font/RobotoSlab.ttf");
+}
+/*-----------------------------------------------*/
+.head_p{
+    background-image: url("../img/banner.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+.h1_title{
+    font-family: var(--fuente);
+    font-size: 5rem;
+    color:var(--color_banco);
+    text-align: center;
+    transition: 0.3s ease-in 0s;
+    margin: 5rem auto;
+    
+}
+@media (min-width:768px) {
+    .h1_title{
+        height: 20rem;
+        font-size: 6rem;
+        margin: 0rem;
+        padding: 8rem;
+        line-height: 0rem;
+    }
+}
+.h1_title span{
+    font-size: 3rem;
+    color: rgb(120, 181, 0);
+    
+}
+.contenedor_header{
+    color:var(--color_banco);
+    display: grid;
+    grid-template-rows: 16rem 1fr 1fr;
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'fuente2';
+    transition: 0.3s ease-in 0s;
+    
+}
+@media (min-width:768px) {
+    .contenedor_header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.nav{
+    background-color: rgba(255, 255, 255, 0.145);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 20rem;
+}
+.nav a:hover{
+    color: rgb(120, 181, 0);
+}
+@media (min-width:768px) {
+    .nav{
+        flex-direction: row;
+        background-color: rgba(255, 255, 255, 0)
+    }
+}
+.contenedor_header p{
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+    transition: 0.3s ease-in 0s;
+    width: 100%;
+}
+@media (min-width:768px) {
+    .contenedor_header p{
+        font-size: 2.5rem;
+        height: 70vh;
+        text-align: start;   
+    }
+}
+.nav a{
+    color:var(--color_banco);
+}
