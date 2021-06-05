@@ -4,6 +4,7 @@ html{
 *{
     border: 0;
     padding: 0;
+    margin: 0;
     text-decoration: none;
     box-sizing: border-box;
 }
@@ -15,7 +16,8 @@ a{
 }
 :root{
     --fuente:'fuente';
-    --color_banco:rgb(243, 243, 243);
+    --color_banco:rgb(250, 255, 239);
+    --verde: rgb(120, 181, 0);
 }
 @font-face {
     font-family:"fuente";
@@ -31,49 +33,61 @@ a{
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
-    position: absolute;
+    width: 100%;
 }
-.h1_title{
-    font-family: var(--fuente);
-    font-size: 5rem;
-    color:var(--color_banco);
-    text-align: center;
-    transition: 0.3s ease-in 0s;
-    margin: 5rem auto;
-    
-}
-@media (min-width:768px) {
-    .h1_title{
-        height: 20rem;
-        font-size: 6rem;
-        margin: 0rem;
-        padding: 8rem;
-        line-height: 0rem;
-    }
-}
-.h1_title span{
-    font-size: 3rem;
-    color: rgb(120, 181, 0);
-    
-}
+
+/*---------------------------------------*/
 .contenedor_header{
     color:var(--color_banco);
-    display: grid;
-    grid-template-rows: 16rem 1fr 1fr;
     height: 100vh;
     width: 90%;
     margin: 0 auto;
     font-family: 'fuente2';
-    transition: 0.3s ease-in 0s;
-    
+    transition: 0.5s ease-in 0s;
+    display: grid;
+    grid-template-rows: 10rem 1.3fr 2.5fr;
+     
 }
 @media (min-width:768px) {
     .contenedor_header{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "head nav"
+                         "parrafo parrafo"
+                         "parrafo parrafo"; 
     }
 }
+
+/*------------------------------------------*/
+
+.title h1{
+    font-family: var(--fuente);
+    font-size: 4rem;
+    color:var(--color_banco);
+    transition: 0.5s ease-in 0s;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.title h1 span{
+    color: var(--verde);
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+@media (min-width:768px) {
+    .title{
+        grid-area: head;
+    }
+    .title h1{
+        font-size: 5rem;
+        align-items: flex-end;
+    }
+    .title h1 span{
+        font-size: 2.7rem;
+    }
+}
+
+/*--------------------------------------------*/
 .nav{
     background-color: rgba(255, 255, 255, 0.145);
     display: flex;
@@ -81,35 +95,49 @@ a{
     flex-direction: column;
     align-items: center;
     font-size: 1.5rem;
-    height: 20rem;
+    transition: 0.5s ease-in 0s;
+    border-radius: 0.3rem;
+}
+.nav a{
+    color:var(--color_banco);   
 }
 .nav a:hover{
-    color: rgb(120, 181, 0);
+    color: var(--verde);
 }
 @media (min-width:768px) {
     .nav{
+        grid-area: nav;
+        background-color: rgba(0, 0, 0, 0);
         flex-direction: row;
-        background-color: rgba(255, 255, 255, 0)
+        align-items: flex-end;
     }
 }
+
+/*---------------------------------------------*/
 .contenedor_header p{
+    transition: 0.5s ease-in 0s;
+    justify-content: center;
+    text-align: center;
     display: flex;
     align-items: flex-end;
-    padding: 3rem;
-    justify-content: center;
+    padding-bottom: 5rem;
     font-size: 1.5rem;
-    line-height: 2;
-    text-align: center;
-    transition: 0.3s ease-in 0s;
-    width: 100%;
 }
+
 @media (min-width:768px) {
     .contenedor_header p{
-        font-size: 2.5rem;
-        height: 70vh;
-        text-align: start;   
+        grid-area: parrafo;
+        font-size: 2rem;
     }
 }
-.nav a{
-    color:var(--color_banco);
+.section_1{
+    width: 100%;
+    height: 100vh;
+}
+
+.footer_prinsipal{
+    width: 100%;
+    height: 50vh;
+    color: var(--verde);
+    background-color: rgb(14, 21, 0);
 }
