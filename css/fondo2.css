@@ -8,19 +8,19 @@
 :root{        /*OPCIONES*/
 
     /*----------General------------*/
-    --width_particle:0.1rem;
-    --color_particle:rgb(255, 255, 255);
+    --width_particle:0.5rem;
+    --color_particle:rgba(255, 255, 255, 0.138);
     --color_destello:rgb(255, 255, 255);
-    --expantion_particle:5rem;
+    --expantion_particle:10rem;
     --difusion_particle:0.5rem;
 
     /*------------Groups------------*/
 
-    --velocidad_grupo1:10s;
+    --velocidad_grupo1:20s;
 
-    --velocidad_grupo2:9s;
+    --velocidad_grupo2:19s;
 
-    --velocidad_grupo3:13s;
+    --velocidad_grupo3:23s;
 
 
 
