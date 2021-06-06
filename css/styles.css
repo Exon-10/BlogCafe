@@ -31,6 +31,7 @@ a{
 .head_p{
     background-image: url("../img/banner.jpg");
     background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -77,10 +78,15 @@ a{
 @media (min-width:768px) {
     .title{
         grid-area: head;
+        
     }
     .title h1{
         font-size: 5rem;
         align-items: flex-end;
+        padding-bottom: 2.7rem;
+        background-color: rgba(255, 255, 255, 0.145);
+        border-radius: .5rem 0rem 0rem .5rem;
+        margin-top: 3rem;
     }
     .title h1 span{
         font-size: 2.7rem;
@@ -107,9 +113,13 @@ a{
 @media (min-width:768px) {
     .nav{
         grid-area: nav;
-        background-color: rgba(0, 0, 0, 0);
         flex-direction: row;
         align-items: flex-end;
+        padding-bottom: 4rem;
+        height: 10rem;
+        background-color: rgba(255, 255, 255, 0.145);
+        border-radius: 0rem .5rem .5rem 0rem;
+        margin-top: 3rem;
     }
 }
 
@@ -122,6 +132,7 @@ a{
     align-items: flex-end;
     padding-bottom: 5rem;
     font-size: 1.5rem;
+    line-height: 3rem;
 }
 
 @media (min-width:768px) {
@@ -131,7 +142,9 @@ a{
     }
 }
 .section_1{
-    width: 100%;
+    width: 90%;
+    background-color: aqua;
+    margin: 0 auto;
     height: 100vh;
 }
 
@@ -139,5 +152,5 @@ a{
     width: 100%;
     height: 50vh;
     color: var(--verde);
-    background-color: rgb(14, 21, 0);
+    background-color: rgb(26, 39, 0);
 }
