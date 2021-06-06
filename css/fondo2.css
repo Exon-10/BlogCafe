@@ -9,10 +9,10 @@
 
     /*----------General------------*/
     --width_particle:0.1rem;
-    --color_particle:rgba(255, 255, 255, 0.501);
+    --color_particle:rgb(255, 255, 255);
     --color_destello:rgb(255, 255, 255);
     --expantion_particle:10rem;
-    --difusion_particle:0.5rem;
+    --difusion_particle:1rem;
 
     /*------------Groups------------*/
 
