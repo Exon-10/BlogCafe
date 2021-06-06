@@ -60,7 +60,7 @@ a{
 
 .title h1{
     font-family: var(--fuente);
-    font-size: 4rem;
+    font-size: 5rem;
     color:var(--color_banco);
     transition: 0.5s ease-in 0s;
     height: 10rem;
@@ -71,8 +71,8 @@ a{
 }
 .title h1 span{
     color: var(--verde);
-    font-size: 2rem;
-    margin-top: 2rem;
+    font-size: 2.3rem;
+    margin-top: 2.5rem;
 }
 @media (min-width:768px) {
     .title{
