@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    margin:0;
+}
+
+:root{        /*OPCIONES*/
+
+    /*----------General------------*/
+    --width_particle:0.1rem;
+    --color_particle:rgb(255, 255, 255);
+    --color_destello:rgb(255, 255, 255);
+    --expantion_particle:5rem;
+    --difusion_particle:0.5rem;
+
+    /*------------Groups------------*/
+
+    --velocidad_grupo1:10s;
+
+    --velocidad_grupo2:9s;
+
+    --velocidad_grupo3:13s;
+
+
+
+
+    /*--------------------------------*/
+    --width_particle_prinsipal:0.2rem;
+    /*--------------------------------*/
+}
+.index3{
+    z-index: 10;
+}
+
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+}
+
+.fondo{
+    margin:10vw -20vw;
+    width: var(--width_particle_prinsipal);
+    height: var(--width_particle_prinsipal);
+    border-radius: 1%;
+    opacity: 0.5;
+    z-index: 3;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: calc(var(--expantion_particle) + 20vmax) calc(var(--expantion_particle) + 1vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 10vmax) calc(var(--expantion_particle) + 15vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 30vmax) calc(var(--expantion_particle) - 10vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 15vmax) calc(var(--expantion_particle) - 20vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 20vmax) calc(var(--expantion_particle) - 30vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 0vmax) calc(var(--expantion_particle) - 40vmax) var(--difusion_particle) var(--width_particle) var(--color_particle);
+    animation-iteration-count: infinite;
+    animation-duration: var(--velocidad_grupo1);
+    animation-name: twinkle;
+  }
+  
+.fondo::before{
+    content:"";
+    background-size: cover;
+    background-position: center center;
+    margin: 5rem;
+    width: var(--width_particle_prinsipal);
+    height: var(--width_particle_prinsipal);
+    border-radius: 100%;
+    background-color:rgba(4, 0, 0, 0);
+    box-shadow: calc(var(--expantion_particle) + 1vmax) calc(var(--expantion_particle) + 1vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 0vmax) calc(var(--expantion_particle) + 10vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 5vmax) calc(var(--expantion_particle) + 20vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 7vmax) calc(var(--expantion_particle) + 15vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 10vmax) calc(var(--expantion_particle) - 30vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) - 0vmax) calc(var(--expantion_particle) - 10vmax) var(--difusion_particle) var(--width_particle) var(--color_particle);
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-duration: var(--velocidad_grupo2);
+    animation-name: twinkle;
+  }
+  .fondo::after{
+    content:"";
+    background-size: cover;
+    background-position: center center;
+    margin: 10rem;
+    width: var(--width_particle_prinsipal);
+    height: var(--width_particle_prinsipal);
+    border-radius: 100%;
+    background-color:rgba(255, 0, 0, 0);
+    box-shadow: calc(var(--expantion_particle) - 10vmax) calc(var(--expantion_particle) + 10vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 0vmax) calc(var(--expantion_particle) - 15vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 15vmax) calc(var(--expantion_particle) - 35vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 7vmax) calc(var(--expantion_particle) - 25vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 5vmax) calc(var(--expantion_particle) + 25vmax) var(--difusion_particle) var(--width_particle) var(--color_particle),
+                calc(var(--expantion_particle) + 10vmax) calc(var(--expantion_particle) + 0vmax) var(--difusion_particle) var(--width_particle) var(--color_particle);
+    position: absolute;
+    animation-iteration-count: infinite;
+    animation-duration:var(--velocidad_grupo3);
+    animation-name: twinkle2;
+  }
+
+  @keyframes twinkle {
+    0% {
+            transform: rotate(0deg) translateX(5rem);
+
+        }
+        10%{
+           --color_particle:var(--color_destello);
+        }
+        20%{
+            --color_particle:var(--color_particle);
+        }
+        30%{
+            --color_particle:var(--color_destello);
+        }   
+        40%{
+            --color_particle:var(--color_particle);
+        }
+        50%{
+            --color_particle:var(--color_destello);
+        }
+        60%{
+            --color_particle:var(--color_particle);
+        }
+        70%{
+            --color_particle:var(--color_destello);
+        }
+        80%{
+            --color_particle:var(--color_particle);
+        }
+        90%{
+            --color_particle:var(--color_destello);
+        }
+    100% {
+            transform: rotate(360deg) translateX(5rem);
+        }
+  }
+
+  @keyframes twinkle2 {
+    0% {
+            transform: rotate(0deg) translateY(5rem);
+        }
+        10%{
+            --color_particle:var(--color_destello);
+         }
+         20%{
+             --color_particle:var(--color_particle);
+         }
+         30%{
+             --color_particle:var(--color_destello);
+         }
+         40%{
+             --color_particle:var(--color_particle);
+         }
+         50%{
+             --color_particle:var(--color_destello);
+         }
+         60%{
+             --color_particle:var(--color_particle);
+         }
+         70%{
+             --color_particle:var(--color_destello);
+         }
+         80%{
+             --color_particle:var(--color_particle);
+         }
+         90%{
+             --color_particle:var(--color_destello);
+         }
+    100% {
+            transform: rotate(-720deg) translateY(5rem);
+        }
+  }
